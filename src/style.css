@@ -1,0 +1,470 @@
+#body-container {
+  overflow-x: hidden;
+  transform: scale(0.9);
+  margin-top: 0;
+  padding-top: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+*:only-child(.footer) {
+  margin: 0;
+  padding: 2px 0 0 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+}
+#apperture-chart-rotate {
+  transform: rotateY(70deg);
+  position: relative;
+  top: -1.8%;
+  left: 5.3%;
+  z-index: 1;
+}
+#diffraction-chart-rotate {
+  transform: rotateY(60deg) scaleY(1.9);
+  position: relative;
+  top: -78.74%;
+  left: 49.3%;
+}
+#diffraction-shape {
+  display: grid;
+  grid-template-areas:
+    "range-container laser-to-diffraction laser-to-diffraction laser-to-diffraction"
+    "range-container diffraction-chart apperture-chart plotDiv";
+}
+.laser-to-diffraction {
+  position: relative;
+  top: 30px;
+  grid-area: laser-to-diffraction;
+}
+.diffraction-chart {
+  grid-area: diffraction-chart;
+}
+.apperture-chart {
+  grid-area: apperture-chart;
+}
+.plotDiv {
+  grid-area: plotDiv;
+}
+.laser-shape {
+  display: flex;
+  flex-direction: column;
+  grid-area: laser-shape;
+}
+.laser-shape img {
+  position: relative;
+  top: 55px;
+  transform: translate(80%);
+  z-index: 2;
+}
+.laser-to-apperture {
+  height: 7%;
+  width: 24%;
+
+  opacity: 60%;
+  position: relative;
+  top: 6.1%;
+  left: 15.3%;
+  z-index: 1;
+}
+.to-observation-plane {
+  height: 5%;
+  width: 35%;
+
+  opacity: 45%;
+  position: relative;
+  top: -8.1%;
+  left: 39.3%;
+  z-index: 0;
+}
+.to-observation-plane1 {
+  height: 1.5%;
+  width: 35%;
+
+  opacity: 25%;
+  position: relative;
+  top: -8.1%;
+  left: 39.3%;
+
+  z-index: -1;
+}
+.to-observation-plane2 {
+  height: 1.5%;
+  width: 35%;
+
+  opacity: 25%;
+  position: relative;
+  top: -16.1%;
+  left: 39.3%;
+
+  z-index: -1;
+}
+.to-observation-plane3 {
+  width: 0;
+  height: 0;
+  border-top: 5.6em solid white;
+  border-right: 26.81vw solid var(--RGB);
+  opacity: 15%;
+  position: relative;
+  top: -42.4%;
+  left: 38.5%;
+  z-index: -1;
+}
+.to-observation-plane4 {
+  width: 0;
+  height: 0;
+  border-bottom: 5.6em solid white;
+  border-right: 26.81vw solid var(--RGB);
+  opacity: 15%;
+  position: relative;
+  top: -34.6%;
+  left: 38.5%;
+  z-index: -1;
+}
+
+#logo {
+  position: relative;
+  left: 22%;
+  top: 10%;
+}
+
+#range1-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 20px;
+}
+#range1-value {
+  padding-left: 12px;
+}
+#range2-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 4px;
+  margin: 4px;
+}
+#range3-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 4px;
+  margin: 4px;
+}
+#range4-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 4px;
+  margin: 4px;
+}
+#range5-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 7px;
+  margin: 4px;
+  letter-spacing: 1.4px;
+}
+rect {
+  cursor: default;
+}
+
+#range-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-area: range-container;
+  padding-top: 70px;
+
+  position: relative;
+}
+.modebar-btn {
+  display: none;
+}
+
+.progress {
+  position: relative;
+  top: 0.4em;
+  height: 10px;
+  width: 50%;
+  border: 10px solid #f4a261;
+  border-radius: 15px;
+}
+.progress .color {
+  position: absolute;
+  background-color: #e61a1a;
+  width: 0px;
+  height: 10px;
+  border-radius: 15px;
+
+  animation: progres 4s 1 linear;
+}
+@media screen and (max-width: 1094px) {
+  #diffraction-shape {
+    display: grid;
+    grid-template-areas:
+      "range-container range-container range-container"
+      "range-container range-container range-container"
+      "laser-to-diffraction laser-to-diffraction laser-to-diffraction"
+      "diffraction-chart apperture-chart plotDiv";
+  }
+  .laser-shape img {
+    position: relative;
+    top: 55px;
+    transform: translate(15%);
+    z-index: 2;
+  }
+  .laser-to-apperture {
+    height: 7%;
+    width: 45%;
+    background-color: red;
+    position: relative;
+    top: 6.4%;
+    left: 10.3%;
+    z-index: 1;
+  }
+  #apperture-chart-rotate {
+    transform: rotateX(70deg);
+    transform: rotateY(70deg);
+    position: relative;
+    top: -1.5%;
+    left: 22.3%;
+    z-index: 1;
+  }
+  #diffraction-chart-rotate {
+    transform: rotateY(60deg) scaleY(1.9);
+    position: relative;
+    top: -79%;
+    left: 58.3%;
+  }
+  .to-observation-plane {
+    height: 5%;
+    width: 27.1%;
+
+    opacity: 45%;
+    position: relative;
+    top: -8.1%;
+    left: 56.3%;
+    z-index: 0;
+  }
+  .to-observation-plane1 {
+    height: 1.5%;
+    width: 27.1%;
+
+    opacity: 25%;
+    position: relative;
+    top: -8.1%;
+    left: 56.3%;
+
+    z-index: -1;
+  }
+  .to-observation-plane2 {
+    height: 1.5%;
+    width: 27.1%;
+
+    opacity: 25%;
+    position: relative;
+    top: -16%;
+    left: 56.3%;
+
+    z-index: -1;
+  }
+  .to-observation-plane3 {
+    width: 0;
+    height: 0;
+    border-top: 5.6em solid white;
+    border-right: 26.81vw solid var(--RGB);
+    opacity: 15%;
+    position: relative;
+    top: -42.5%;
+    left: 56.5%;
+
+    z-index: -1;
+  }
+  .to-observation-plane4 {
+    width: 0;
+    height: 0;
+    border-bottom: 5.6em solid white;
+    border-right: 26.81vw solid var(--RGB);
+    opacity: 15%;
+
+    position: relative;
+    top: -34.7%;
+    left: 56.5%;
+
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 910px) {
+  #diffraction-shape {
+    display: grid;
+    grid-template-areas:
+      "range-container range-container range-container range-container range-container"
+      "laser-to-diffraction laser-to-diffraction laser-to-diffraction laser-to-diffraction laser-to-diffraction"
+      "diffraction-chart . apperture-chart  . plotDiv";
+  }
+  .laser-shape img {
+    position: relative;
+    top: 55px;
+    transform: translate(15%);
+    z-index: 2;
+  }
+  .laser-to-apperture {
+    height: 7%;
+    width: 42%;
+    background-color: red;
+    position: relative;
+    top: 6.4%;
+    left: 13.3%;
+    z-index: 1;
+  }
+  .to-observation-plane {
+    height: 5%;
+    width: 26%;
+
+    opacity: 45%;
+    position: relative;
+    top: -8.1%;
+    left: 57.3%;
+    z-index: 0;
+  }
+  .to-observation-plane1 {
+    height: 1.5%;
+    width: 26%;
+
+    opacity: 25%;
+    position: relative;
+    top: -8.1%;
+    left: 57.3%;
+
+    z-index: -1;
+  }
+  .to-observation-plane2 {
+    height: 1.5%;
+    width: 26%;
+
+    opacity: 25%;
+    position: relative;
+    top: -16%;
+    left: 57.3%;
+
+    z-index: -1;
+  }
+  .to-observation-plane3 {
+    width: 0;
+    height: 0;
+    border-top: 5.6em solid white;
+    border-right: 26.81vw solid var(--RGB);
+    opacity: 15%;
+
+    position: relative;
+    top: -42.4%;
+    left: 56.5%;
+
+    z-index: -1;
+  }
+  .to-observation-plane4 {
+    width: 0;
+    height: 0;
+    border-bottom: 5.6em solid white;
+    border-right: 26.81vw solid var(--RGB);
+    opacity: 15%;
+
+    position: relative;
+    top: -34.4%;
+    left: 56.5%;
+
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 869px) {
+  #diffraction-shape {
+    display: grid;
+    grid-template-areas:
+      "range-container range-container range-container range-container range-container"
+      "laser-to-diffraction laser-to-diffraction laser-to-diffraction laser-to-diffraction laser-to-diffraction"
+      ". . diffraction-chart . . "
+      ". . apperture-chart . ."
+      ". . plotDiv . .";
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #logo {
+    position: relative;
+    left: 15%;
+
+    top: 40%;
+  }
+}
+
+@keyframes progres {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 75%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.footer {
+  background-color: #000;
+  margin: auto 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: auto 0px;
+  font-family: "Play", sans-serif;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 0.5% 0%;
+  padding: 1px 0%;
+  color: gray;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  color: #fff;
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+
+#programmer {
+  color: gray;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
